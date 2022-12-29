@@ -2,7 +2,11 @@ import {View, Text, TouchableOpacity} from 'react-native';
 
 import {styles} from './styles';
 
-export function Participant() {
+type TProps = {
+   name: string
+}
+
+export function Participant({name}: TProps) {
    const handleParticipantDelete = () => {
       console.log('participante deletado');
    }
@@ -10,7 +14,7 @@ export function Participant() {
    return(
       <View style={styles.container}>
          <Text style={styles.name}>
-            Lincoln Ruteski
+            {name}
          </Text>
 
          <TouchableOpacity
