@@ -17,20 +17,22 @@ export default function Home(){
             Sexta, 30 de dezembro de 2022.
          </Text>
 
-         <TextInput
-            style={styles.input}
-            placeholder="Nome do participante"
-            placeholderTextColor="#6b6b6b"
-         />
+         <View style={styles.form}>
+            <TextInput
+               style={styles.input}
+               placeholder="Nome do participante"
+               placeholderTextColor="#6b6b6b"
+            />
 
-         <TouchableOpacity
-            style={styles.button}
-            onPress={handleParticipantAdd}
-         >
-            <Text style={styles.buttonText}>
-               +
-            </Text>
-         </TouchableOpacity>
+            <TouchableOpacity
+               style={styles.button}
+               onPress={handleParticipantAdd}
+            >
+               <Text style={styles.buttonText}>
+                  +
+               </Text>
+            </TouchableOpacity>
+         </View>
       </View>
    )
 }
