@@ -9,6 +9,10 @@ export default function Home(){
       console.log('vc clicou no botao de adicionar!');
    }
 
+   const handleParticipantRemove = () => {
+      console.log(`participante deletado`);
+   }
+
    return(
       <View style={styles.container}>
          <Text style={styles.eventName}>
@@ -36,10 +40,11 @@ export default function Home(){
             </TouchableOpacity>
          </View>
 
-         <Participant name="Lincoln" />
-         <Participant name="Maisa" />
-         <Participant name="Noah" />
-         <Participant name="Mélanie" />
+         <Participant
+            name="Lincoln"
+            onRemove={handleParticipantRemove}
+         />
+
       </View>
    )
 }
